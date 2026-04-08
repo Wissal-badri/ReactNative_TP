@@ -67,6 +67,14 @@ const HomeScreen = () => {
         <Ionicons name="radio-button-off-outline" size={24} color="#e6f1ff" />
         <Text style={[sharedStyles.buttonText, { color: '#e6f1ff' }]}>B. Compteur Stateless</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={[sharedStyles.button, { borderColor: '#00FFFF', backgroundColor: 'rgba(0, 255, 255, 0.1)' }]} 
+        onPress={() => navigation.navigate('Calculator')}
+      >
+        <Ionicons name="calculator-outline" size={24} color="#00FFFF" />
+        <Text style={sharedStyles.buttonText}>C. Calculatrice Premium</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 };

@@ -6,4 +6,5 @@ export type RootStackParamList = {
   Props: undefined;
   StatefulCounter: undefined;
   StatelessCounter: undefined;
+  Calculator: undefined;
 };

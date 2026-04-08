@@ -9,6 +9,7 @@ import AppelComponentScreen from '../screens/AppelComponentScreen';
 import StatesDemoScreen from '../screens/StatesDemoScreen';
 import StylingScreen from '../screens/StylingScreen';
 import PropsDemoScreen from '../screens/PropsDemoScreen';
+import CalculatorScreen from '../screens/CalculatorScreen';
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -30,6 +31,7 @@ export const AppNavigator = () => {
       <Stack.Screen name="Props" component={PropsDemoScreen} options={{ title: 'Utilisation des Props' }} />
       <Stack.Screen name="StatefulCounter" component={StatefulCounterScreen} options={{ title: 'Compteur Stateful' }} />
       <Stack.Screen name="StatelessCounter" component={StatelessCounterScreen} options={{ title: 'Compteur Stateless' }} />
+      <Stack.Screen name="Calculator" component={CalculatorScreen} options={{ title: 'Calculatrice' }} />
     </Stack.Navigator>
   );
 };
