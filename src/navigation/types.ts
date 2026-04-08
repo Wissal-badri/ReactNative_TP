@@ -7,4 +7,6 @@ export type RootStackParamList = {
   StatefulCounter: undefined;
   StatelessCounter: undefined;
   Calculator: undefined;
+  LoginTransfer: undefined;
+  LoginDisplay: { email: string; password: string };
 };

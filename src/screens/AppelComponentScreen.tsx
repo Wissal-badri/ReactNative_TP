@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, ScrollView } from 'react-native';
 import { sharedStyles } from '../styles/sharedStyles';
 import MyCustomComponent from '../components/MyCustomComponent';
+// @ts-ignore
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const AppelComponentScreen = () => {

@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../navigation/types';
-import { sharedStyles } from '../styles/sharedStyles';
+import { sharedStyles, COLORS } from '../styles/sharedStyles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'Home'>;
@@ -69,11 +69,19 @@ const HomeScreen = () => {
       </TouchableOpacity>
 
       <TouchableOpacity 
-        style={[sharedStyles.button, { borderColor: '#00FFFF', backgroundColor: 'rgba(0, 255, 255, 0.1)' }]} 
+        style={[sharedStyles.button, { borderColor: COLORS.accent, backgroundColor: 'rgba(0, 255, 255, 0.1)' }]} 
         onPress={() => navigation.navigate('Calculator')}
       >
         <Ionicons name="calculator-outline" size={24} color="#00FFFF" />
         <Text style={sharedStyles.buttonText}>C. Calculatrice Premium</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={[sharedStyles.button, { borderColor: '#ffd700', backgroundColor: 'rgba(255, 215, 0, 0.05)' }]} 
+        onPress={() => navigation.navigate('LoginTransfer')}
+      >
+        <Ionicons name="swap-horizontal-outline" size={24} color="#ffd700" />
+        <Text style={[sharedStyles.buttonText, { color: '#ffd700' }]}>D. Transfert de Données</Text>
       </TouchableOpacity>
     </ScrollView>
   );

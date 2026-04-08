@@ -10,6 +10,8 @@ import StatesDemoScreen from '../screens/StatesDemoScreen';
 import StylingScreen from '../screens/StylingScreen';
 import PropsDemoScreen from '../screens/PropsDemoScreen';
 import CalculatorScreen from '../screens/CalculatorScreen';
+import LoginTransferScreen from '../screens/LoginTransferScreen';
+import LoginDisplayScreen from '../screens/LoginDisplayScreen';
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -32,6 +34,8 @@ export const AppNavigator = () => {
       <Stack.Screen name="StatefulCounter" component={StatefulCounterScreen} options={{ title: 'Compteur Stateful' }} />
       <Stack.Screen name="StatelessCounter" component={StatelessCounterScreen} options={{ title: 'Compteur Stateless' }} />
       <Stack.Screen name="Calculator" component={CalculatorScreen} options={{ title: 'Calculatrice' }} />
+      <Stack.Screen name="LoginTransfer" component={LoginTransferScreen} options={{ title: 'Login Form' }} />
+      <Stack.Screen name="LoginDisplay" component={LoginDisplayScreen} options={{ title: 'Résumé' }} />
     </Stack.Navigator>
   );
 };
