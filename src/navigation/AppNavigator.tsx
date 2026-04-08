@@ -7,6 +7,7 @@ import StatefulCounterScreen from '../screens/StatefulCounterScreen';
 import DataSharingFirstScreen from '../screens/DataSharingFirstScreen';
 import DataSharingSecondScreen from '../screens/DataSharingSecondScreen';
 import StyleSheetScreen from '../screens/StyleSheetScreen';
+import EmailPasswordScreen from '../screens/EmailPasswordScreen';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -15,6 +16,7 @@ export type RootStackParamList = {
   DataSharingFirst: undefined;
   DataSharingSecond: { sharedText: string };
   StyleSheetDemo: undefined;
+  EmailPassword: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -28,6 +30,7 @@ export const AppNavigator = () => {
       <Stack.Screen name="DataSharingFirst" component={DataSharingFirstScreen} options={{ title: 'Envoyer Données' }} />
       <Stack.Screen name="DataSharingSecond" component={DataSharingSecondScreen} options={{ title: 'Données Reçues' }} />
       <Stack.Screen name="StyleSheetDemo" component={StyleSheetScreen} options={{ title: 'StyleSheet Demo' }} />
+      <Stack.Screen name="EmailPassword" component={EmailPasswordScreen} options={{ title: 'Saisie Email/Mot de passe' }} />
     </Stack.Navigator>
   );
 };

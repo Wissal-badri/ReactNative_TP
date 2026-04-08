@@ -47,6 +47,14 @@ const HomeScreen = () => {
         <Ionicons name="color-palette-outline" size={24} color="#00FFFF" />
         <Text style={sharedStyles.buttonText}>4. Démo StyleSheet</Text>
       </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={sharedStyles.button} 
+        onPress={() => navigation.navigate('EmailPassword')}
+      >
+        <Ionicons name="mail-outline" size={24} color="#00FFFF" />
+        <Text style={sharedStyles.buttonText}>5. Formulaire Email/Mot de passe</Text>
+      </TouchableOpacity>
     </View>
   );
 };
