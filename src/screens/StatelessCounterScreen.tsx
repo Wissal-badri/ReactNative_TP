@@ -1,33 +1,44 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, ScrollView } from 'react-native';
 import { sharedStyles } from '../styles/sharedStyles';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const StatelessCounterScreen = () => {
-  const [count, setCount] = useState(0);
-
+// Composant Enfant - Sans État (Stateless)
+const CounterDisplay = ({ value }: { value: number }) => {
   return (
-    <View style={sharedStyles.container}>
-      <Text style={sharedStyles.title}>Mode Stateless</Text>
-      <Text style={sharedStyles.subtitle}>Composant Parent</Text>
-      
-      <StatelessDisplay count={count} />
-      
-      <TouchableOpacity style={[sharedStyles.button, { justifyContent: 'center' }]} onPress={() => setCount(count + 1)}>
-        <Ionicons name="add-circle-outline" size={24} color="#00FFFF" />
-        <Text style={sharedStyles.buttonText}>Incrémenter la valeur</Text>
-      </TouchableOpacity>
+    <View style={sharedStyles.card}>
+      <Text style={sharedStyles.subtitle}>Je suis un composant Stateless</Text>
+      <Text style={[sharedStyles.text, { marginBottom: 15 }]}>Je ne gère pas ma donnée moi-même.</Text>
+      <Text style={sharedStyles.counterValue}>{value}</Text>
     </View>
   );
 };
 
-const StatelessDisplay = ({ count }: { count: number }) => {
+// Composant Parent - Gère l'état
+const StatelessCounterScreen = () => {
+  const [count, setCount] = useState(10); // Valeur de départ différente
+
+  const increment = () => setCount((prev) => prev + 1);
+
   return (
-    <View style={sharedStyles.card}>
-      <Ionicons name="layers-outline" size={40} color="#8892b0" style={{ marginBottom: 15 }} />
-      <Text style={sharedStyles.text}>Je suis un composant enfant recevant la donnée par Props.</Text>
-      <Text style={{ ...sharedStyles.title, fontSize: 48, color: '#00FFFF', marginTop: 20 }}>{count}</Text>
-    </View>
+    <ScrollView contentContainerStyle={sharedStyles.container}>
+      <Ionicons name="apps-outline" size={60} color="#00FFFF" style={{ marginBottom: 10 }} />
+      <Text style={sharedStyles.title}>Compteur Stateless</Text>
+      <Text style={sharedStyles.subtitle}>La donnée est reçue via les Props</Text>
+      
+      <CounterDisplay value={count} />
+
+      <TouchableOpacity style={sharedStyles.button} onPress={increment}>
+        <Ionicons name="refresh-outline" size={24} color="#00FFFF" />
+        <Text style={sharedStyles.buttonText}>Incrémenter (depuis le parent)</Text>
+      </TouchableOpacity>
+      
+      <View style={[sharedStyles.card, { marginTop: 40, padding: 15, borderColor: '#ffd700' }]}>
+        <Text style={[sharedStyles.text, { fontSize: 13, textAlign: 'center', color: '#ffd700' }]}>
+          Remarquez que le composant enfant (`CounterDisplay`) ne connaît pas le `useState`. Il affiche juste `value`.
+        </Text>
+      </View>
+    </ScrollView>
   );
 };
 

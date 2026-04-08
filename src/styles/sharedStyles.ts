@@ -73,5 +73,27 @@ export const sharedStyles = StyleSheet.create({
     shadowOpacity: 0.3,
     shadowRadius: 20,
     elevation: 8,
+  },
+  resetButton: {
+    backgroundColor: 'rgba(230, 241, 255, 0.05)',
+    paddingVertical: 12,
+    paddingHorizontal: 24,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: '#e6f1ff',
+    marginTop: 10,
+  },
+  resetButtonText: {
+    color: '#e6f1ff',
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  counterValue: {
+    fontSize: 72,
+    fontWeight: '900',
+    color: '#00FFFF',
+    textShadowColor: 'rgba(0, 255, 255, 0.5)',
+    textShadowOffset: { width: 0, height: 0 },
+    textShadowRadius: 15,
   }
 });
