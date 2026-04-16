@@ -83,6 +83,33 @@ const HomeScreen = () => {
         <Ionicons name="swap-horizontal-outline" size={24} color="#ffd700" />
         <Text style={[sharedStyles.buttonText, { color: '#ffd700' }]}>D. Transfert de Données</Text>
       </TouchableOpacity>
+
+      <View style={{ height: 40 }} />
+      <View style={{ width: '100%', height: 1, backgroundColor: 'rgba(0, 255, 255, 0.2)', marginBottom: 20 }} />
+
+      <TouchableOpacity 
+        style={[sharedStyles.button, { borderColor: '#ff00ff', backgroundColor: 'rgba(255, 0, 255, 0.05)' }]} 
+        onPress={() => navigation.navigate('ComponentsUI')}
+      >
+        <Ionicons name="cube-outline" size={24} color="#ff00ff" />
+        <Text style={[sharedStyles.buttonText, { color: '#ff00ff' }]}>5. Components UI (50+)</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={[sharedStyles.button, { borderColor: '#00ff00', backgroundColor: 'rgba(0, 255, 0, 0.05)' }]} 
+        onPress={() => navigation.navigate('Multimedia')}
+      >
+        <Ionicons name="images-outline" size={24} color="#00ff00" />
+        <Text style={[sharedStyles.buttonText, { color: '#00ff00' }]}>6. Multimedia Demo</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity 
+        style={[sharedStyles.button, { borderColor: '#1e90ff', backgroundColor: 'rgba(30, 144, 255, 0.05)' }]} 
+        onPress={() => navigation.navigate('PhoneSMS')}
+      >
+        <Ionicons name="call-outline" size={24} color="#1e90ff" />
+        <Text style={[sharedStyles.buttonText, { color: '#1e90ff' }]}>7. Phone & SMS</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 };

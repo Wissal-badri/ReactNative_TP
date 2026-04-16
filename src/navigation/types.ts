@@ -9,4 +9,7 @@ export type RootStackParamList = {
   Calculator: undefined;
   LoginTransfer: undefined;
   LoginDisplay: { email: string; password: string };
+  ComponentsUI: undefined;
+  Multimedia: undefined;
+  PhoneSMS: undefined;
 };

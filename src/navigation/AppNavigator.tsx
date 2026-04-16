@@ -12,6 +12,9 @@ import PropsDemoScreen from '../screens/PropsDemoScreen';
 import CalculatorScreen from '../screens/CalculatorScreen';
 import LoginTransferScreen from '../screens/LoginTransferScreen';
 import LoginDisplayScreen from '../screens/LoginDisplayScreen';
+import ComponentsUIScreen from '../screens/ComponentsUIScreen';
+import MultimediaScreen from '../screens/MultimediaScreen';
+import PhoneSMSScreen from '../screens/PhoneSMSScreen';
 
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -36,6 +39,9 @@ export const AppNavigator = () => {
       <Stack.Screen name="Calculator" component={CalculatorScreen} options={{ title: 'Calculatrice' }} />
       <Stack.Screen name="LoginTransfer" component={LoginTransferScreen} options={{ title: 'Login Form' }} />
       <Stack.Screen name="LoginDisplay" component={LoginDisplayScreen} options={{ title: 'Résumé' }} />
+      <Stack.Screen name="ComponentsUI" component={ComponentsUIScreen} options={{ title: 'Components UI' }} />
+      <Stack.Screen name="Multimedia" component={MultimediaScreen} options={{ title: 'Multimedia' }} />
+      <Stack.Screen name="PhoneSMS" component={PhoneSMSScreen} options={{ title: 'Phone & SMS' }} />
     </Stack.Navigator>
   );
 };
